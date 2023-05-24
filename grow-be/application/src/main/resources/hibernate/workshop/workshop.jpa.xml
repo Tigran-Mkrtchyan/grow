@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-mappings
+        xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm
+    http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
+        version="2.0">
+
+    <entity class="com.grow.workshop_core.domain.aggregate.WorkshopAggregate"
+            access="FIELD" name="WorkshopAggregate">
+        <table name="workshops_v2"/>
+        <attributes>
+           <basic name="hostEmail">
+               <column name="host_email"/>
+           </basic>
+            <basic name="hostName">
+                <column name="host_name"/>
+            </basic>
+            <basic name="title">
+                <column name="title"/>
+            </basic>
+            <basic name="hostEmail">
+                <column name="host_email"/>
+            </basic>
+            <basic name="reporterId">
+                <column name="reporter_id"/>
+            </basic>
+        </attributes>
+    </entity>
+
+
+
+</entity-mappings>

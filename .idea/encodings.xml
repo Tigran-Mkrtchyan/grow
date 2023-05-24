@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/grow-be/application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/integration-tests/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/integration-tests/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/shared/common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/shared/common-infra/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/shared/common-ui/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/shared/kernel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/shared/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/shared/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/workshop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/workshop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/workshop/workshop-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/workshop/workshop-infra/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/grow-be/workshop/workshop-ui/src/main/java" charset="UTF-8" />
+  </component>
+</project>

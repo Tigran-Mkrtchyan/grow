@@ -1,0 +1,44 @@
+name: Integration tests
+
+on:
+  push:
+    branches: [ develop, stage ]
+
+jobs:
+  integration-tests:
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: 'maven'
+
+      - name: Build with Maven
+        run: mvn -B install --file pom.xml
+
+      - name: Run integration tests
+        run: |
+          mvn verify -DTest -Dspring.profiles.active=test
+      - name: Trigger GithubPage deploy
+#       Report generated files path are longer than default config allowed
+#       Move to docs folder as GitHub pages configured to read from that folder
+        run: |
+          if [ "$GITHUB_REF" = "refs/heads/develop" ]; then
+            git config core.longpaths true
+            git config user.email "admin@ultralabs.io"
+            git config user.name "GithubAction"
+            git fetch origin gh-pages
+            git checkout gh-pages
+            rm -rf docs/*
+            mkdir docs/jacoco-resources
+            mv code_coverage_report/index.html docs/
+            mv code_coverage_report/jacoco-resources/* docs/jacoco-resources
+            git add .
+            git commit -m "Added coverage report"
+            git push origin gh-pages
+          fi

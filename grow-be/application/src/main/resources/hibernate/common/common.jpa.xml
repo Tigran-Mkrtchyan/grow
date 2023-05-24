@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm
+    http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
+                 version="2.0">
+    <mapped-superclass class="com.grow.kernel.domain.base.AbstractEntity"
+                       access="FIELD">
+        <attributes>
+            <id name="internalId">
+                <column name="id"/>
+                <generated-value strategy="SEQUENCE"/>
+            </id>
+            <basic name="id">
+                <column name="resource_id"/>
+            </basic>
+            <basic name="createdDate">
+                <column name="created_date"/>
+            </basic>
+            <transient name="domainEvents"/>
+        </attributes>
+    </mapped-superclass>
+
+</entity-mappings>
